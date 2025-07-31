@@ -8,47 +8,59 @@ This is a Model Context Protocol (MCP) server that integrates Google's Gemini CL
 
 **Key Capability**: The tool acts as a bridge between Claude and Gemini, allowing Claude to offload large file analysis to Gemini when needed.
 
-## Current Analysis & Replacement Plans
+## CREATE Tool: Authentic Creative Process Support
 
-**Brainstorm Tool Assessment**: The current `brainstorm` tool fundamentally confuses orientations. Based on Robert Fritz's "Creating Your Life" framework, there are two primary life orientations:
+**Philosophy**: Based on Robert Fritz's "Creating Your Life" framework, this tool supports **Creative Orientation** (generative) rather than **Reactive-Responsive Orientation** (problem-solving).
 
-**Reactive-Responsive Orientation** (Problem-Solving):
-- React/respond to prevailing circumstances
-- Motivation: rid ourselves of something we don't want
-- The problem organizes actions, not desired outcomes
-- Solving all problems doesn't guarantee having what you want
-- Temporary mobilization, limited creative process
+**Core Distinction**:
+- **Problem-Solving**: "What's your challenge?" → Eliminate what you don't want
+- **Creative Orientation**: "What do you want to create?" → Bring into being what you do want
 
-**Creative Orientation** (Generative):
-- Choices, not circumstances, are the organizing principle
-- Motivation: bring into being something we do want
-- Take action on behalf of desired goals
-- Focus on outcomes rather than eliminating problems
+**Structural Tension Framework**:
+The fundamental creative force comes from tension between:
+1. **Vision** (desired outcome) 
+2. **Current Reality** (where you are now)
+This tension naturally resolves by moving toward the vision.
 
-**The Tool's Core Error**: The brainstorm tool applies problem-solving methodology frameworks (SCAMPER, design thinking, etc.) to what should be generative creative work. It asks "What's your brainstorming challenge?" - treating creativity as a problem to solve rather than something to bring into being.
+**Three-Phase Creative Process**:
 
-**True Creative Orientation** involves:
-- Structural tension between desired outcome and current reality
-- Generative approach driven by what you want to create
-- Moving toward desired results, not away from problems
-- "What is the outcome I want?" not "What problem needs solving?"
-
-**Replacement Plan**: ✅ **COMPLETED** - Replaced with `create` tool that supports authentic creative orientation.
+1. **Germination** - Beginning excitement, vision clarification, balanced planning/action
+2. **Assimilation** - Structural tension internalization, momentum building, natural movement
+3. **Completion** - Finishing touches, avoiding complexity, successful conclusion
 
 ## Implementation Status
 
-**✅ CREATE Tool Successfully Implemented** (2025-07-31):
-- New `create` tool based on Fritz's three-phase creative process
-- Supports Germination, Assimilation, and Completion phases
-- Structural tension framework (desired outcome ↔ current reality)
-- Problem-solving language detection and redirection
-- Original `brainstorm` tool marked as deprecated with migration guidance
+**✅ CREATE Tool Live & Operational** (2025-07-31):
+- Fully implemented and tested Robert Fritz's creative framework
+- All three phases with specialized prompts and guidance
+- Problem-solving language detection automatically redirects to creative orientation
+- Structural tension calculator for vision/reality gap analysis
+- Original `brainstorm` tool deprecated with educational migration messaging
 
-**Key Features**:
-- Phase-specific prompts for each stage of creative process
-- Creative orientation focus ("What do you want to create?")
-- Elimination of business methodology frameworks (SCAMPER, etc.)
-- Authentic creative support rather than idea generation scoring
+## Usage Examples
+
+### Germination Phase
+```
+desiredOutcome: "Create a mobile app that helps people track creative projects"
+currentReality: "I have programming skills but no mobile app experience"
+creativePhase: "germination"
+timeframe: "6 months"
+```
+
+### Assimilation Phase  
+```
+desiredOutcome: "Launch beta version with 50 active users"
+currentReality: "Working prototype, 5 friends testing and giving feedback"
+creativePhase: "assimilation"
+resources: "React Native skills, $500 budget"
+```
+
+### Completion Phase
+```
+desiredOutcome: "Polished app ready for App Store launch"
+currentReality: "Beta tested, 4.2 stars, minor bugs being fixed"
+creativePhase: "completion"
+```
 
 ## Development Commands
 
@@ -135,12 +147,18 @@ All tools follow the `UnifiedTool` interface:
 - Sandbox mode (-s flag) for safe code execution
 - **Change Mode**: Structured output for code edits with OLD/NEW format
 
-**brainstorm** (`src/tools/brainstorm.tool.ts`) - **SCHEDULED FOR REPLACEMENT**
-- Current implementation: Traditional brainstorming with methodology frameworks (divergent, convergent, SCAMPER, etc.)
-- Problem: Conflates brainstorming (free-association of unrelated ideas) with creative problem-solving
-- Will be replaced with proper creative orientation system that distinguishes between:
-  - Creating vs Problem-solving (different cognitive processes)
-  - True creative work vs associative idea generation
+**create** (`src/tools/create.tool.ts`) - **PRIMARY CREATIVE TOOL**
+- Supports authentic creative process through Fritz's three-phase framework
+- **Germination**: Initial excitement, vision clarification, balanced planning/action
+- **Assimilation**: Structural tension internalization, momentum building, resource gathering
+- **Completion**: Finishing touches, completion resistance management, successful conclusion
+- Creative orientation: "What do you want to create?" vs problem-solving approach
+- Problem-solving language detection with redirection to creative orientation
+
+**brainstorm** (`src/tools/brainstorm.tool.ts`) - **⚠️ DEPRECATED**
+- Legacy tool using problem-solving methodologies (SCAMPER, design-thinking, etc.)
+- Marked as deprecated with migration guidance to `create` tool
+- Still functional but displays warnings directing users to the new approach
 
 ## Change Mode System
 
