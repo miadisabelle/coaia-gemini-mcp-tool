@@ -29,8 +29,8 @@ import {
 
 const server = new Server(
   {
-    name: "gemini-cli-mcp",
-    version: "1.1.4",
+    name: "coaia-gemini-cli-mcp",
+    version: "2.0.0",
   },{
     capabilities: {
       tools: {},
@@ -252,7 +252,7 @@ server.setRequestHandler(GetPromptRequestSchema, async (request: GetPromptReques
 
 // Start the server
 async function main() {
-  Logger.debug("init gemini-mcp-tool");
+  Logger.debug("init coaia-gemini-mcp-tool");
   const transport = new StdioServerTransport(); await server.connect(transport);
-  Logger.debug("gemini-mcp-tool listening on stdio");
+  Logger.debug("coaia-gemini-mcp-tool listening on stdio");
 } main().catch((error) => {Logger.error("Fatal error:", error); process.exit(1); }); 
