@@ -10,14 +10,30 @@ This is a Model Context Protocol (MCP) server that integrates Google's Gemini CL
 
 ## Current Analysis & Replacement Plans
 
-**Brainstorm Tool Assessment**: The current `brainstorm` tool fundamentally misunderstands the nature of creative work. It treats brainstorming as creative problem-solving, when in reality:
+**Brainstorm Tool Assessment**: The current `brainstorm` tool fundamentally confuses orientations. Based on Robert Fritz's "Creating Your Life" framework, there are two primary life orientations:
 
-- **Creating** is not **problem-solving** (different cognitive processes)
-- **Problem-solving** is not **creating** (different goals and approaches) 
-- **Brainstorming** is free-association of unrelated ideas, not creative orientation
-- True **creative work** requires intentional creative orientation, not methodology frameworks
+**Reactive-Responsive Orientation** (Problem-Solving):
+- React/respond to prevailing circumstances
+- Motivation: rid ourselves of something we don't want
+- The problem organizes actions, not desired outcomes
+- Solving all problems doesn't guarantee having what you want
+- Temporary mobilization, limited creative process
 
-**Replacement Plan**: The brainstorm tool will be completely redesigned to support authentic creative processes rather than business methodology frameworks. This aligns with understanding creative work as distinct from analytical problem-solving.
+**Creative Orientation** (Generative):
+- Choices, not circumstances, are the organizing principle
+- Motivation: bring into being something we do want
+- Take action on behalf of desired goals
+- Focus on outcomes rather than eliminating problems
+
+**The Tool's Core Error**: The brainstorm tool applies problem-solving methodology frameworks (SCAMPER, design thinking, etc.) to what should be generative creative work. It asks "What's your brainstorming challenge?" - treating creativity as a problem to solve rather than something to bring into being.
+
+**True Creative Orientation** involves:
+- Structural tension between desired outcome and current reality
+- Generative approach driven by what you want to create
+- Moving toward desired results, not away from problems
+- "What is the outcome I want?" not "What problem needs solving?"
+
+**Replacement Plan**: Replace with tools that support authentic creative orientation - helping users clarify desired outcomes and establish structural tension rather than applying business methodology to creative work.
 
 ## Development Commands
 
