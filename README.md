@@ -218,4 +218,22 @@ Contributions are welcome! Please see our [Contributing Guidelines](CONTRIBUTING
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+## 🚀 What's New in v2.0
+
+### CREATE Tool - Authentic Creative Process
+- **NEW**: Support for Robert Fritz's three-phase creative framework
+- **NEW**: Structural tension between vision and current reality
+- **NEW**: Problem-solving language detection with creative redirection
+- **ENHANCED**: Creative orientation vs reactive-responsive problem-solving
+
+### Breaking Changes
+- Package renamed: `gemini-mcp-tool` → `coaia-gemini-mcp-tool`
+- Binary renamed: `gemini-mcp` → `coaia-gemini-mcp`
+- Major version bump: 1.1.4 → 2.0.0
+- Brainstorm tool deprecated in favor of authentic CREATE tool
+
+**Philosophy**: "What do you want to create?" not "What problem needs solving?"
+
+---
+
 **Disclaimer:** This is an unofficial, third-party tool and is not affiliated with, endorsed, or sponsored by Google.
