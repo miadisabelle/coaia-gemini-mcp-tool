@@ -128,13 +128,41 @@ const brainstormArgsSchema = z.object({
 
 export const brainstormTool: UnifiedTool = {
   name: "brainstorm",
-  description: "Generate novel ideas with dynamic context gathering. --> Creative frameworks (SCAMPER, Design Thinking, etc.), domain context integration, idea clustering, feasibility analysis, and iterative refinement.",
+  description: "⚠️ DEPRECATED: Use 'create' tool instead. This tool uses problem-solving methodologies instead of authentic creative orientation. The new 'create' tool supports Fritz's three-phase creative process: Germination, Assimilation, and Completion.",
   zodSchema: brainstormArgsSchema,
   prompt: {
-    description: "Generate structured brainstorming prompt with methodology-driven ideation, domain context integration, and analytical evaluation framework",
+    description: "⚠️ DEPRECATED: Use 'create' tool for authentic creative work based on desired outcomes rather than problem-solving methodologies",
   },
   category: 'gemini',
   execute: async (args, onProgress) => {
+    // Deprecation warning and migration guidance
+    const migrationMessage = `⚠️ DEPRECATED TOOL USED ⚠️
+
+The 'brainstorm' tool uses outdated problem-solving methodologies instead of authentic creative orientation.
+
+🎯 USE THE NEW 'CREATE' TOOL INSTEAD:
+
+The 'create' tool supports Robert Fritz's proven creative process:
+• Germination: Initial excitement and vision clarification
+• Assimilation: Building momentum through structural tension  
+• Completion: Bringing creation to fruition
+
+Instead of "What's your brainstorming challenge?" ask:
+"What specific outcome do you want to create?"
+
+Example usage:
+- desiredOutcome: "Create a mobile app that helps people track creative projects"
+- currentReality: "I have programming skills but no mobile app experience"
+- creativePhase: "germination"
+
+This shifts from reactive problem-solving to generative creative orientation.
+
+---
+
+Proceeding with deprecated brainstorm functionality...`;
+
+    onProgress?.(migrationMessage);
+
     const {
       prompt,
       model,

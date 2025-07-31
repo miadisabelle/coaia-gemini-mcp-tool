@@ -90,13 +90,20 @@ export interface ToolArguments {
   chunkCacheKey?: string; // Optional cache key for continuation
   message?: string; // For Ping tool -- Un-used.
   
-  // --> new tool
+  // --> brainstorm tool (deprecated - use create tool instead)
   methodology?: string; // Brainstorming framework to use
   domain?: string; // Domain context for specialized brainstorming
   constraints?: string; // Known limitations or requirements
   existingContext?: string; // Background information to build upon
   ideaCount?: number; // Target number of ideas to generate
   includeAnalysis?: boolean; // Include feasibility and impact analysis
+  
+  // --> create tool (Fritz's creative orientation)
+  desiredOutcome?: string; // What specific outcome do you want to create?
+  currentReality?: string; // Where are you now in relation to this vision?
+  creativePhase?: string; // germination, assimilation, or completion
+  timeframe?: string; // When do you want this created?
+  resources?: string; // What resources do you have available?
   
   [key: string]: string | boolean | number | undefined; // Allow additional properties
 }
