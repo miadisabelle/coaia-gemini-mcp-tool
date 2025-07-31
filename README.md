@@ -1,30 +1,38 @@
 
-# Gemini MCP Tool
+# CoAIA Gemini MCP Tool
 
 <div align="center">
 
-[![GitHub Release](https://img.shields.io/github/v/release/jamubc/gemini-mcp-tool?logo=github&label=GitHub)](https://github.com/jamubc/gemini-mcp-tool/releases)
-[![npm version](https://img.shields.io/npm/v/gemini-mcp-tool)](https://www.npmjs.com/package/gemini-mcp-tool)
-[![npm downloads](https://img.shields.io/npm/dt/gemini-mcp-tool)](https://www.npmjs.com/package/gemini-mcp-tool)
+[![GitHub Release](https://img.shields.io/github/v/release/coaia/coaia-gemini-mcp-tool?logo=github&label=GitHub)](https://github.com/coaia/coaia-gemini-mcp-tool/releases)
+[![npm version](https://img.shields.io/npm/v/coaia-gemini-mcp-tool)](https://www.npmjs.com/package/coaia-gemini-mcp-tool)
+[![npm downloads](https://img.shields.io/npm/dt/coaia-gemini-mcp-tool)](https://www.npmjs.com/package/coaia-gemini-mcp-tool)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Open Source](https://img.shields.io/badge/Open%20Source-❤️-red.svg)](https://github.com/jamubc/gemini-mcp-tool)
+[![Open Source](https://img.shields.io/badge/Open%20Source-❤️-red.svg)](https://github.com/coaia/coaia-gemini-mcp-tool)
 
 </div>
 
-> 📚 **[View Full Documentation](https://jamubc.github.io/gemini-mcp-tool/)** - Search me!, Examples, FAQ, Troubleshooting, Best Practices
+> 📚 **[View Full Documentation](https://coaia.github.io/coaia-gemini-mcp-tool/)** - Examples, FAQ, Troubleshooting, Best Practices
 
-This is a simple Model Context Protocol (MCP) server that allows AI assistants to interact with the [Gemini CLI](https://github.com/google-gemini/gemini-cli). It enables the AI to leverage the power of Gemini's massive token window for large analysis, especially with large files and codebases using the `@` syntax for direction.
+A Model Context Protocol (MCP) server that bridges AI assistants with [Gemini CLI](https://github.com/google-gemini/gemini-cli), featuring **authentic creative process support** based on Robert Fritz's "Creating Your Life" framework.
 
-- Ask gemini natural questions, through claude or Brainstorm new ideas in a party of 3!
+## 🎯 **NEW: CREATE Tool - Authentic Creative Process**
 
-<a href="https://glama.ai/mcp/servers/@jamubc/gemini-mcp-tool">
-  <img width="380" height="200" src="https://glama.ai/mcp/servers/@jamubc/gemini-mcp-tool/badge" alt="Gemini Tool MCP server" />
-</a>
+Transform your creative work with Fritz's proven three-phase framework:
+- **🌱 Germination**: Initial excitement, vision clarification, balanced action
+- **⚡ Assimilation**: Structural tension, momentum building, natural movement  
+- **✨ Completion**: Finishing touches, successful conclusion
 
-## TLDR: [![Claude](https://img.shields.io/badge/Claude-D97757?logo=claude&logoColor=fff)](#) + [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#)
+**Creative Orientation**: "What do you want to create?" (not "What problem to solve?")
 
+## Core Features
 
-**Goal**: Use Gemini's powerful analysis capabilities directly in Claude Code to save tokens and analyze large files.
+✅ **Claude + Gemini Integration**: Bridge AI assistants with Gemini's massive context window  
+✅ **CREATE Tool**: Authentic creative process based on Robert Fritz's framework  
+✅ **File Analysis**: Use `@` syntax for large codebases and files  
+✅ **Sandbox Mode**: Safe code execution and testing  
+✅ **Change Mode**: Structured code edits with OLD/NEW format
+
+## TLDR: [![Claude](https://img.shields.io/badge/Claude-D97757?logo=claude&logoColor=fff)](#) + [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#) + 🎨 **Creative Process**
 
 ## Prerequisites
 
@@ -37,12 +45,12 @@ Before using this tool, ensure you have:
 ### One-Line Setup
 
 ```bash
-claude mcp add gemini-cli -- npx -y gemini-mcp-tool
+claude mcp add coaia-gemini-cli -- npx -y coaia-gemini-mcp-tool
 ```
 
 ### Verify Installation
 
-Type `/mcp` inside Claude Code to verify the gemini-cli MCP is active.
+Type `/mcp` inside Claude Code to verify the coaia-gemini-cli MCP is active.
 
 ---
 
@@ -52,9 +60,9 @@ If you already have it configured in Claude Desktop:
 
 1. Add to your Claude Desktop config:
 ```json
-"gemini-cli": {
+"coaia-gemini-cli": {
   "command": "npx",
-  "args": ["-y", "gemini-mcp-tool"]
+  "args": ["-y", "coaia-gemini-mcp-tool"]
 }
 ```
 
@@ -74,9 +82,9 @@ Add this configuration to your Claude Desktop config file:
 ```json
 {
   "mcpServers": {
-    "gemini-cli": {
+    "coaia-gemini-cli": {
       "command": "npx",
-      "args": ["-y", "gemini-mcp-tool"]
+      "args": ["-y", "coaia-gemini-mcp-tool"]
     }
   }
 }
@@ -89,8 +97,8 @@ If you installed globally, use this configuration instead:
 ```json
 {
   "mcpServers": {
-    "gemini-cli": {
-      "command": "gemini-mcp"
+    "coaia-gemini-cli": {
+      "command": "coaia-gemini-mcp"
     }
   }
 }
@@ -107,10 +115,38 @@ After updating the configuration, restart your terminal session.
 
 ## Example Workflow
 
-- **Natural language**: "use gemini to explain index.html", "understand the massive project using gemini", "ask gemini to search for latest news"
-- **Claude Code**: Type `/gemini-cli` and commands will populate in Claude Code's interface.
+- **Natural language**: "use gemini to explain index.html", "create a mobile app using the create tool", "ask gemini to search for latest news"
+- **Claude Code**: Type `/coaia-gemini-cli` and commands will populate in Claude Code's interface.
 
 ## Usage Examples
+
+### 🎨 CREATE Tool - Authentic Creative Process
+
+Transform your creative work with the three-phase framework:
+
+#### Germination Phase
+```
+"I want to create a mobile app that helps people track their creative projects"
+- desiredOutcome: "Create a mobile app that helps people track creative projects with inspiration features"
+- currentReality: "I have programming skills but no mobile app experience"
+- creativePhase: "germination"
+```
+
+#### Assimilation Phase
+```
+"Help me build momentum on my app project"
+- desiredOutcome: "Launch beta version with 50 active users" 
+- currentReality: "Working prototype, 5 friends testing and giving feedback"
+- creativePhase: "assimilation"
+```
+
+#### Completion Phase
+```
+"Bring my app to successful launch"
+- desiredOutcome: "Polished app ready for App Store"
+- currentReality: "Beta tested, 4.2 stars, final bugs being fixed"
+- creativePhase: "completion"
+```
 
 ### With File References (using @ syntax)
 
@@ -137,27 +173,42 @@ The sandbox mode allows you to safely test code changes, run scripts, or execute
 
 These tools are designed to be used by the AI assistant.
 
-- **`ask-gemini`**: Asks Google Gemini for its perspective. Can be used for general questions or complex analysis of files.
-  - **`prompt`** (required): The analysis request. Use the `@` syntax to include file or directory references (e.g., `@src/main.js explain this code`) or ask general questions (e.g., `Please use a web search to find the latest news stories`).
+- **`create`** ⭐ **PRIMARY CREATIVE TOOL**: Supports authentic creative process through Fritz's three-phase framework.
+  - **`desiredOutcome`** (required): What specific outcome do you want to create? Focus on what you want to bring into being.
+  - **`currentReality`** (optional): Where are you now in relation to this vision?
+  - **`creativePhase`** (optional): Which phase - germination, assimilation, or completion? (defaults to germination)
+  - **`timeframe`** (optional): When do you want this created?
+  - **`resources`** (optional): What resources do you have available?
+  - **`model`** (optional): Gemini model to use.
+
+- **`ask-gemini`**: Asks Google Gemini for analysis and general questions.
+  - **`prompt`** (required): Use `@` syntax for files (e.g., `@src/main.js explain this code`) or ask general questions.
   - **`model`** (optional): The Gemini model to use. Defaults to `gemini-2.5-pro`.
   - **`sandbox`** (optional): Set to `true` to run in sandbox mode for safe code execution.
-- **`sandbox-test`**: Safely executes code or commands in Gemini's sandbox environment. Always runs in sandbox mode.
-  - **`prompt`** (required): Code testing request (e.g., `Create and run a Python script that...` or `@script.py Run this safely`).
-  - **`model`** (optional): The Gemini model to use.
+  - **`changeMode`** (optional): Enable structured change mode for code edits.
+
+- **`brainstorm`** ⚠️ **DEPRECATED**: Use `create` tool instead for authentic creative work.
+
 - **`Ping`**: A simple test tool that echoes back a message.
 - **`Help`**: Shows the Gemini CLI help text.
 
 ### Slash Commands (for the User)
 
-You can use these commands directly in Claude Code's interface (compatibility with other clients has not been tested).
+You can use these commands directly in Claude Code's interface.
+
+- **/create** ⭐ **NEW**: Authentic creative process support
+  - **`desiredOutcome`** (required): What do you want to create?
+  - **`currentReality`** (optional): Where are you now?
+  - **`creativePhase`** (optional): germination, assimilation, or completion
 
 - **/analyze**: Analyzes files or directories using Gemini, or asks general questions.
-  - **`prompt`** (required): The analysis prompt. Use `@` syntax to include files (e.g., `/analyze prompt:@src/ summarize this directory`) or ask general questions (e.g., `/analyze prompt:Please use a web search to find the latest news stories`).
+  - **`prompt`** (required): Use `@` syntax for files or ask general questions.
+  
 - **/sandbox**: Safely tests code or scripts in Gemini's sandbox environment.
-  - **`prompt`** (required): Code testing request (e.g., `/sandbox prompt:Create and run a Python script that processes CSV data` or `/sandbox prompt:@script.py Test this script safely`).
+  - **`prompt`** (required): Code testing request.
+  
 - **/help**: Displays the Gemini CLI help information.
 - **/ping**: Tests the connection to the server.
-  - **`message`** (optional): A message to echo back.
 
 ## Contributing
 

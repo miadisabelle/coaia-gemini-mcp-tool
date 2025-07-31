@@ -1,11 +1,11 @@
 {
-  "name": "gemini-mcp-tool",
-  "version": "1.1.4",
-  "description": "MCP server for Gemini CLI integration",
+  "name": "coaia-gemini-mcp-tool",
+  "version": "2.0.0",
+  "description": "MCP server for Gemini CLI integration with authentic creative process support based on Robert Fritz's framework",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "gemini-mcp": "dist/index.js"
+    "coaia-gemini-mcp": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",
@@ -25,18 +25,22 @@
     "gemini",
     "cli",
     "ai",
-    "llm"
+    "llm",
+    "creative-process",
+    "robert-fritz",
+    "structural-tension",
+    "creative-orientation"
   ],
-  "author": "jamubc",
+  "author": "coaia",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jamubc/gemini-mcp-tool.git"
+    "url": "git+https://github.com/miadisabelle/coaia-gemini-mcp-tool.git"
   },
   "bugs": {
-    "url": "https://github.com/jamubc/gemini-mcp-tool/issues"
+    "url": "https://github.com/miadisabelle/coaia-gemini-mcp-tool/issues"
   },
-  "homepage": "https://github.com/jamubc/gemini-mcp-tool#readme",
+  "homepage": "https://github.com/miadisabelle/coaia-gemini-mcp-tool#readme",
   "engines": {
     "node": ">=16.0.0"
   },
