@@ -187,7 +187,6 @@ These tools are designed to be used by the AI assistant.
   - **`sandbox`** (optional): Set to `true` to run in sandbox mode for safe code execution.
   - **`changeMode`** (optional): Enable structured change mode for code edits.
 
-- **`brainstorm`** ⚠️ **DEPRECATED**: Use `create` tool instead for authentic creative work.
 
 - **`Ping`**: A simple test tool that echoes back a message.
 - **`Help`**: Shows the Gemini CLI help text.
@@ -230,7 +229,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Package renamed: `gemini-mcp-tool` → `coaia-gemini-mcp-tool`
 - Binary renamed: `gemini-mcp` → `coaia-gemini-mcp`
 - Major version bump: 1.1.4 → 2.0.0
-- Brainstorm tool deprecated in favor of authentic CREATE tool
+- Replaced brainstorm tool with authentic CREATE tool
 
 **Philosophy**: "What do you want to create?" not "What problem needs solving?"
 

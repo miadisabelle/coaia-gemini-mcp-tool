@@ -35,7 +35,7 @@ This tension naturally resolves by moving toward the vision.
 - All three phases with specialized prompts and guidance
 - Problem-solving language detection automatically redirects to creative orientation
 - Structural tension calculator for vision/reality gap analysis
-- Original `brainstorm` tool deprecated with educational migration messaging
+- Original `brainstorm` tool removed in favor of CREATE tool
 
 ## Usage Examples
 
@@ -155,10 +155,6 @@ All tools follow the `UnifiedTool` interface:
 - Creative orientation: "What do you want to create?" vs problem-solving approach
 - Problem-solving language detection with redirection to creative orientation
 
-**brainstorm** (`src/tools/brainstorm.tool.ts`) - **⚠️ DEPRECATED**
-- Legacy tool using problem-solving methodologies (SCAMPER, design-thinking, etc.)
-- Marked as deprecated with migration guidance to `create` tool
-- Still functional but displays warnings directing users to the new approach
 
 ## Change Mode System
 
@@ -197,16 +193,16 @@ The tool supports Gemini CLI's `@` syntax for file inclusion:
 
 **Claude Code Setup**:
 ```bash
-claude mcp add gemini-cli -- npx -y gemini-mcp-tool
+claude mcp add coaia-gemini-cli -- npx -y coaia-gemini-mcp-tool
 ```
 
 **Claude Desktop Setup**: Add to config JSON:
 ```json
 {
   "mcpServers": {
-    "gemini-cli": {
+    "coaia-gemini-cli": {
       "command": "npx",
-      "args": ["-y", "gemini-mcp-tool"]
+      "args": ["-y", "coaia-gemini-mcp-tool"]
     }
   }
 }
