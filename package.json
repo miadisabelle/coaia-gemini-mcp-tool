@@ -1,5 +1,5 @@
 {
-  "name": "mcp-ripple-thinker",
+  "name": "ripple-thinker",
   "version": "3.0.1",
   "description": "Structural Thinking Engine: MCP server integrating Gemini CLI with authentic creative processes, structural observation protocols, and persistent memory charts based on Robert Fritz's methodology",
   "type": "module",
