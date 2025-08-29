@@ -5,7 +5,8 @@
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "coaia-gemini-mcp": "dist/index.js"
+    "mcp-ripple-thinker": "dist/index.js",
+    "ripple-thinker": "dist/index.js"
   },
   "scripts": {
     "build": "tsc && chmod +x dist/index.js",
