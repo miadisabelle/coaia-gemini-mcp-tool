@@ -32,7 +32,9 @@ Transform your creative work with Fritz's proven three-phase framework:
 ✅ **Sandbox Mode**: Safe code execution and testing  
 ✅ **Change Mode**: Structured code edits with OLD/NEW format
 
-## TLDR: [![Claude](https://img.shields.io/badge/Claude-D97757?logo=claude&logoColor=fff)](#) + [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#) + 🎨 **Creative Process**
+## Quick Overview
+
+[![Claude](https://img.shields.io/badge/Claude-D97757?logo=claude&logoColor=fff)](#) + [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#) + 🎨 **Creative Process**
 
 ## Prerequisites
 
@@ -42,7 +44,9 @@ Before using this tool, ensure you have:
 2. **[Google Gemini CLI](https://github.com/google-gemini/gemini-cli)** installed and configured
 
 
-### One-Line Setup
+## Installation
+
+### One-Line Setup (Recommended)
 
 ```bash
 claude mcp add coaia-gemini-cli -- npx -y coaia-gemini-mcp-tool
@@ -50,7 +54,7 @@ claude mcp add coaia-gemini-cli -- npx -y coaia-gemini-mcp-tool
 
 ### Verify Installation
 
-Type `/mcp` inside Claude Code to verify the coaia-gemini-cli MCP is active.
+Type `/mcp` inside Claude Code to verify the `coaia-gemini-cli` MCP is active.
 
 ---
 
@@ -169,27 +173,34 @@ The sandbox mode allows you to safely test code changes, run scripts, or execute
 - `use gemini sandbox to install numpy and create a data visualization`
 - `test this code safely: Create a script that makes HTTP requests to an API`
 
-### Tools (for the AI)
+## Available Tools
 
-These tools are designed to be used by the AI assistant.
+### Core Tools
 
-- **`create`** ⭐ **PRIMARY CREATIVE TOOL**: Supports authentic creative process through Fritz's three-phase framework.
-  - **`desiredOutcome`** (required): What specific outcome do you want to create? Focus on what you want to bring into being.
-  - **`currentReality`** (optional): Where are you now in relation to this vision?
-  - **`creativePhase`** (optional): Which phase - germination, assimilation, or completion? (defaults to germination)
-  - **`timeframe`** (optional): When do you want this created?
-  - **`resources`** (optional): What resources do you have available?
-  - **`model`** (optional): Gemini model to use.
+#### **`create`** ⭐ **PRIMARY CREATIVE TOOL**
+Supports authentic creative process through Fritz's three-phase framework.
 
-- **`ask-gemini`**: Asks Google Gemini for analysis and general questions.
-  - **`prompt`** (required): Use `@` syntax for files (e.g., `@src/main.js explain this code`) or ask general questions.
-  - **`model`** (optional): The Gemini model to use. Defaults to `gemini-2.5-pro`.
-  - **`sandbox`** (optional): Set to `true` to run in sandbox mode for safe code execution.
-  - **`changeMode`** (optional): Enable structured change mode for code edits.
+**Parameters:**
+- **`desiredOutcome`** (required): What specific outcome do you want to create?
+- **`currentReality`** (optional): Where are you now in relation to this vision?
+- **`creativePhase`** (optional): germination, assimilation, or completion (defaults to germination)
+- **`timeframe`** (optional): When do you want this created?
+- **`resources`** (optional): What resources do you have available?
+- **`model`** (optional): Gemini model to use
 
+#### **`ask-gemini`**
+Asks Google Gemini for analysis and general questions.
 
-- **`Ping`**: A simple test tool that echoes back a message.
-- **`Help`**: Shows the Gemini CLI help text.
+**Parameters:**
+- **`prompt`** (required): Use `@` syntax for files (e.g., `@src/main.js explain this code`) or ask general questions
+- **`model`** (optional): The Gemini model to use (defaults to `gemini-2.5-pro`)
+- **`sandbox`** (optional): Set to `true` to run in sandbox mode for safe code execution
+- **`changeMode`** (optional): Enable structured change mode for code edits
+
+### Utility Tools
+
+- **`ping`**: Test tool that echoes back a message
+- **`help`**: Shows the Gemini CLI help text
 
 ### Slash Commands (for the User)
 
