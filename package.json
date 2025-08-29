@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.0",
-    "@types/node": "^20.0.0",
+    "@types/node": "^20.19.9",
     "archiver": "^7.0.1",
     "mermaid": "^11.9.0",
     "tsx": "^4.0.0",
