@@ -1,7 +1,7 @@
 {
   "name": "coaia-gemini-mcp-tool",
   "version": "2.0.3",
-  "description": "MCP server for Gemini CLI integration with authentic creative process support based on Robert Fritz's framework",
+  "description": "MCP server for Gemini CLI integration with creative process support based on Robert Fritz's framework",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
