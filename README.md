@@ -1,4 +1,4 @@
-# 🌊 COAIA Structural Thinking Engine
+# 🌊 COAIA Structural Thinking Engine (codename "Ripple Thinker")
 
 <div align="center">
 
