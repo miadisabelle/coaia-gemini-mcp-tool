@@ -237,3 +237,17 @@ Test individual tools by sending MCP requests directly to the server during deve
 **Dev Dependencies**:
 - `typescript`: TypeScript compiler
 - `vitepress`: Documentation generation
+
+
+--------
+BRANCH: ripple-thinker
+
+* This branch is dedicated to try some stuff with Claude and the embodiment of Ripple in the MCP
+
+## TODOs 
+
+* [ ] Think of calling this package mcp-ripple-thinker
+* [ ] Think of building a library for other use that this one would import from called 'ripple-thinker'
+
+
+
