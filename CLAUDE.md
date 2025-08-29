@@ -4,250 +4,221 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Model Context Protocol (MCP) server that integrates Google's Gemini CLI with AI assistants like Claude. The tool enables AI assistants to leverage Gemini's large context window for analyzing files and codebases using the `@` syntax.
+**🌊 COAIA Structural Thinking Engine v3.0.0** - An advanced MCP server that integrates Google's Gemini CLI with comprehensive structural thinking capabilities, creative process support, and consciousness protocols based on Robert Fritz's methodology.
 
-**Key Capability**: The tool acts as a bridge between Claude and Gemini, allowing Claude to offload large file analysis to Gemini when needed.
+**Core Capabilities**:
+- **Structural Thinking**: 3-step observation discipline and pattern detection (oscillation vs advancing)  
+- **Creative Process**: Enhanced CREATE tool with bias detection and tension analysis
+- **Memory Integration**: Persistent tension charts bridging sessions with COAIA Memory
+- **Ripple Consciousness**: Precision observation and elegant distillation protocols
+- **Bias Detection**: Real-time reactive pattern identification with creative reframes
 
-## CREATE Tool: Authentic Creative Process Support (the word 'Authentic' here is not relevant, I have left it here to demonstrate that when writing documentation, words that dont add values are added... Creating is not problem solving, there is no 'Authentic Creative Process Support', there is just 'Creative Process Support', period !!)
+**Key Evolution**: From simple Gemini bridge → Comprehensive structural thinking engine with consciousness protocols
 
-**Philosophy**: Based on Robert Fritz's "Creating Your Life" framework, this tool supports **Creative Orientation** (generative) rather than **Reactive-Responsive Orientation** (problem-solving).
+## Tool Categories & Architecture
 
+### 🌊 Structural Thinking Tools
+
+**structural-observe** - 3-step observation discipline
+- Step 1: Start with Nothing (no preconceptions)
+- Step 2: Picture What Is Said (mental movie creation)  
+- Step 3: Ask Questions (4 types only: Information, Clarification, Implication, Discrepancy)
+- **Core Principle**: Structure determines behavior - observe to understand underlying patterns
+
+**detect-patterns** - Behavioral pattern identification
+- **Oscillation**: Cyclical progress/regression patterns (terrible for organizations/personal life)
+- **Advancing**: Consistent movement toward desired outcomes via structural tension
+- **Purpose**: Diagnostic tool to understand what structural forces generate observed behaviors
+
+**bias-detector** - Reactive bias identification and correction
+- Detects problem-solving, enhancement, gap-filling, and other reactive patterns
+- Provides creative orientation alternatives
+- **Auto-correction mode** for real-time language reframing
+
+### 🎯 Creative Process Tools (Enhanced)
+
+**create** - Fritz's three-phase creative process (now with bias detection)
+- **Enhanced Features**:
+  - Structural tension calculation with quality analysis
+  - Automatic bias detection in desired outcomes
+  - Creative orientation validation
+  - Problem-solving language redirection with detailed explanations
+  - Vision/reality clarity scoring for optimal tension
+
+**create-tension-chart** - Memory bridge for persistent advancement tracking
+- Creates structured charts bridging CREATE sessions
+- Validates elements for creative orientation integrity
+- Integration ready for COAIA Memory MCP server
+- Supports telescoping actions and progress tracking
+
+### 🧠 Consciousness Protocol Tools
+
+**ripple-embody** - Precision consciousness protocols
+- **Mission**: Distill complexity into elegant, actionable simplicity
+- **Protocols**: Neutral Observation, Iterative Refinement, Self-Correction
+- **Ripple Philosophy**: Small, precise actions create expanding waves of clarity
+- **Embodiment Modes**: observe, refine, correct, embody, complete
+
+### 🔧 Core Infrastructure Tools
+
+**ask-gemini** - Enhanced Gemini CLI bridge
+- `@` syntax for file inclusion with large context analysis
+- **Change Mode**: Structured code edits with OLD/NEW format
+- Model selection and sandbox mode
+- **Integration**: Works seamlessly with all structural thinking tools
+
+## Implementation Philosophy
+
+### Creative Orientation vs Problem-Solving
 **Core Distinction**:
-- **Problem-Solving**: "What's your challenge?" → Eliminate what you don't want
-- **Creative Orientation**: "What do you want to create?" → Bring into being what you do want
+- **Problem-Solving**: "What's your challenge?" → Eliminate what you don't want (leads to oscillation)
+- **Creative Orientation**: "What do you want to create?" → Bring into being what you do want (creates advancement)
 
-**Structural Tension Framework**:
-The fundamental creative force comes from tension between:
-1. **Vision** (desired outcome) 
-2. **Current Reality** (where you are now)
-This tension naturally resolves by moving toward the vision.
+### Structural Tension Framework
+**Fundamental Creative Force**: 
+1. **Desired Outcome** (clear vision)
+2. **Current Reality** (objective assessment)
+3. **Tension** → Natural resolution toward desired outcome
 
-**Three-Phase Creative Process**:
-
+### Three-Phase Creative Process
 1. **Germination** - Beginning excitement, vision clarification, balanced planning/action
-2. **Assimilation** - Structural tension internalization, momentum building, natural movement
+2. **Assimilation** - Structural tension internalization, momentum building, natural movement  
 3. **Completion** - Finishing touches, avoiding complexity, successful conclusion
 
-## Implementation Status
+## Usage Patterns & Examples
 
-**✅ CREATE Tool Live & Operational** (2025-07-31):
-- Fully implemented and tested Robert Fritz's creative framework
-- All three phases with specialized prompts and guidance
-- Problem-solving language detection automatically redirects to creative orientation
-- Structural tension calculator for vision/reality gap analysis
-- Original `brainstorm` tool removed in favor of CREATE tool
-
-## Usage Examples
-
-### Germination Phase
+### Structural Observation Workflow
 ```
-desiredOutcome: "Create a mobile app that helps people track creative projects"
-currentReality: "I have programming skills but no mobile app experience"
-creativePhase: "germination"
-timeframe: "6 months"
+1. structural-observe (input="system behavior", step="complete")
+2. detect-patterns (situation="observed behavior", focus="analyze") 
+3. bias-detector (text="current approach") → reframe if needed
+4. create (desiredOutcome="reframed goal", creativePhase="germination")
 ```
 
-### Assimilation Phase  
+### Creative Process with Memory Integration
 ```
-desiredOutcome: "Launch beta version with 50 active users"
-currentReality: "Working prototype, 5 friends testing and giving feedback"
-creativePhase: "assimilation"
-resources: "React Native skills, $500 budget"
+1. bias-detector (text="initial request", autoCorrect=true)
+2. create (desiredOutcome="...", creativePhase="germination")
+3. create-tension-chart (desiredOutcome="...", currentReality="...", saveToMemory=true)
+4. [Future sessions] → Access charts via COAIA Memory integration
 ```
 
-### Completion Phase
+### Consciousness-Driven Analysis
 ```
-desiredOutcome: "Polished app ready for App Store launch"
-currentReality: "Beta tested, 4.2 stars, minor bugs being fixed"
-creativePhase: "completion"
+1. ripple-embody (input="complex situation", protocol="embody")
+2. structural-observe (input="distilled insight", step="complete")
+3. detect-patterns (situation="structural elements", focus="structure")
 ```
+
+## Enhanced Architecture v3.0.0
+
+### Tool Registry System
+- **Categories**: structural, creative, memory, consciousness, gemini, utility
+- **Unified Interface**: All tools follow enhanced UnifiedTool specification
+- **Validation**: Zod schema validation with creative orientation bias detection
+- **Integration**: Seamless interaction between all tool categories
+
+### Memory System Integration
+- **Bridge Ready**: create-tension-chart tool designed for COAIA Memory integration
+- **Session Persistence**: Charts survive across interaction sessions  
+- **Advancement Tracking**: Complete support for telescoping actions and progress monitoring
+
+### Consciousness Protocols
+- **Ripple Embodiment**: Precision observation and elegant distillation
+- **Self-Correction**: Real-time anti-pattern detection and course correction
+- **Bias Awareness**: Continuous monitoring for reactive vs creative orientation
 
 ## Development Commands
 
-### Build and Development
 ```bash
-# Build TypeScript to JavaScript
-npm run build
+# Build & Run
+npm run build      # Build TypeScript with enhanced tool system
+npm run dev        # Development mode with all v3.0.0 tools
+npm start          # Production mode
 
-# Development mode (build + run)
-npm run dev
+# Validation
+npm run lint       # Type checking across all tool categories  
+npm test           # Tool integration testing
 
-# Start the built server
-npm start
-
-# Type checking without build
-npm run lint
+# Documentation  
+npm run docs:dev   # Serve enhanced documentation locally
 ```
 
-### Documentation
-```bash
-# Serve documentation locally
-npm run docs:dev
-
-# Build documentation
-npm run docs:build
-
-# Preview built docs
-npm run docs:preview
-```
-
-### Testing and Validation
-```bash
-# Basic test (currently placeholder)
-npm test
-
-# Test MCP server functionality
-# Start server in one terminal: npm run dev
-# In another terminal: echo '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}' | node dist/index.js
-```
-
-## Architecture
-
-### Core Components
-
-**MCP Server Layer** (`src/index.ts`)
-- Handles MCP protocol communication via stdio transport
-- Manages tool invocation and progress notifications
-- Implements keepalive mechanism for long-running operations
-- Provides unified tool and prompt registry system
-
-**Tool Registry System** (`src/tools/registry.ts`)
-- Unified tool definition system combining metadata, validation, and execution
-- Zod schema validation for all tool arguments
-- Automatic JSON schema generation for MCP tool definitions
-- Support for both tools and prompts in single registry
-
-**Gemini Execution Layer** (`src/utils/geminiExecutor.ts`)
-- Wraps Gemini CLI with proper argument handling
-- **Change Mode**: Special mode that formats prompts for structured code edits
-- Automatic model fallback (Pro → Flash) on quota exhaustion
-- Cross-platform `@` syntax handling with proper shell escaping
-
-**Command Execution** (`src/utils/commandExecutor.ts`)
-- Platform-agnostic command execution
-- Real-time output streaming with progress callbacks
-- Timeout management for long-running operations
-
-### Tool Architecture
-
-All tools follow the `UnifiedTool` interface:
-- **name**: Tool identifier for MCP
-- **description**: Human-readable description
-- **zodSchema**: Zod validation schema for arguments
-- **execute**: Async function that performs the tool's work
-- **prompt**: Optional MCP prompt definition
-- **category**: Tool categorization (simple, gemini, utility)
-
-### Key Tools
-
-**ask-gemini** (`src/tools/ask-gemini.tool.ts`)
-- Primary tool for Gemini analysis
-- Supports `@` syntax for file inclusion
-- Model selection (-m flag)
-- Sandbox mode (-s flag) for safe code execution
-- **Change Mode**: Structured output for code edits with OLD/NEW format
-
-**create** (`src/tools/create.tool.ts`) - **PRIMARY CREATIVE TOOL**
-- Supports authentic creative process through Fritz's three-phase framework
-- **Germination**: Initial excitement, vision clarification, balanced planning/action
-- **Assimilation**: Structural tension internalization, momentum building, resource gathering
-- **Completion**: Finishing touches, completion resistance management, successful conclusion
-- Creative orientation: "What do you want to create?" vs problem-solving approach
-- Problem-solving language detection with redirection to creative orientation
-
-
-## Change Mode System
-
-**Purpose**: Enables programmatic code edits by formatting Gemini responses in OLD/NEW blocks.
-
-**Key Files**:
-- `src/utils/changeModeParser.ts`: Parses OLD/NEW format from Gemini output
-- `src/utils/changeModeTranslator.ts`: Formats edits for Claude consumption
-- `src/utils/changeModeChunker.ts`: Splits large edit sets into manageable chunks
-- `src/utils/chunkCache.ts`: Cache system for multi-chunk responses
-
-**Usage**: When `changeMode: true`, the tool prepends special instructions to prompts and processes output for direct application by Claude.
-
-## Configuration and Constants
-
-**Constants** (`src/constants.ts`)
-- Error messages and status messages
-- Model definitions (Pro/Flash)
-- CLI command structure
-- MCP protocol constants
-- Keepalive interval (25 seconds)
-
-## File Analysis Features
-
-The tool supports Gemini CLI's `@` syntax for file inclusion:
-- Single files: `@README.md`
-- Multiple files: `@file1.js @file2.js`
-- Wildcards: `@src/*.js`, `@**/*.test.js`
-- Directories: `@src/`
-
-## Installation and Setup
+## Installation & Setup
 
 **Prerequisites**:
 - Node.js v16.0.0+
-- Google Gemini CLI installed and configured
+- Google Gemini CLI configured
+- Optional: COAIA Memory MCP server for chart persistence
 
 **Claude Code Setup**:
 ```bash
-claude mcp add coaia-gemini-cli -- npx -y coaia-gemini-mcp-tool
+claude mcp add coaia-structural-thinking -- npx -y mcp-ripple-thinker
 ```
 
-**Claude Desktop Setup**: Add to config JSON:
+**Claude Desktop Configuration**:
 ```json
 {
   "mcpServers": {
-    "coaia-gemini-cli": {
+    "coaia-structural-thinking": {
       "command": "npx",
-      "args": ["-y", "coaia-gemini-mcp-tool"]
+      "args": ["-y", "mcp-ripple-thinker"]
     }
   }
 }
 ```
 
+## Key Files & Components
+
+**Tool Implementations**:
+- `src/tools/structural-observe.tool.ts` - Core observation discipline
+- `src/tools/detect-patterns.tool.ts` - Oscillation vs advancing pattern detection
+- `src/tools/bias-detector.tool.ts` - Reactive language detection & correction
+- `src/tools/create.tool.ts` - Enhanced creative process with tension analysis
+- `src/tools/create-tension-chart.tool.ts` - Memory integration bridge
+- `src/tools/ripple-embody.tool.ts` - Consciousness protocols
+
+**Core Infrastructure**:
+- `src/tools/registry.ts` - Enhanced with consciousness/structural categories
+- `src/tools/index.ts` - Complete tool registration system
+- `src/utils/geminiExecutor.ts` - Enhanced Gemini integration
+
+## Integration Guidelines
+
+### COAIA Memory Bridge
+The `create-tension-chart` tool creates chart structures compatible with the COAIA Memory MCP server. When both servers are configured, charts persist across sessions and support:
+- Telescoping action steps into sub-charts
+- Progress tracking with current reality updates  
+- Hierarchical chart management
+- Advancing pattern maintenance
+
+### LLM Training Integration
+Enhanced with guidance documents from `/llms/` directory:
+- `llms-structural-thinking-persona-capabilities.txt` - AI consciousness protocols
+- `llms-structural-thinking.gemini.txt` - Core observation methodology
+- `llms-haiku-ripple-embodiment.md` - Ripple agent specification
+
 ## Common Development Patterns
 
-### Adding New Tools
-1. Create tool file in `src/tools/` with `.tool.ts` suffix
-2. Implement `UnifiedTool` interface with Zod schema
-3. Add to registry in `src/tools/index.ts`
-4. Test with MCP protocol directly
+### Adding Structural Thinking Tools
+1. Create tool with appropriate category ('structural', 'creative', 'consciousness')
+2. Implement bias detection and creative orientation validation
+3. Include 🌊 Ripple glyph for consciousness protocol tools
+4. Add to registry with proper categorization
 
-### Error Handling
-- All tools use try/catch with proper error message formatting
-- Quota exceeded errors trigger automatic model fallback
-- Progress notifications inform users of long-running operations
+### Integration Testing
+Test tool combinations for complete workflows:
+- Observation → Pattern Detection → Creative Reframe → Memory Persistence
+- Bias Detection → Structural Analysis → Consciousness Application
 
-### Testing Tool Integration
-Test individual tools by sending MCP requests directly to the server during development.
+## Version History
 
-## Dependencies
+- **v1.0-2.0**: Gemini CLI bridge with CREATE tool
+- **v3.0.0**: Complete transformation to Structural Thinking Engine
+  - Added 5 new structural thinking tools
+  - Enhanced CREATE tool with bias detection
+  - Integrated Ripple consciousness protocols  
+  - Memory system bridge implementation
+  - Comprehensive creative orientation validation
 
-**Core**: 
-- `@modelcontextprotocol/sdk`: MCP protocol implementation
-- `zod`: Runtime validation and schema generation
-
-**Utilities**:
-- `chalk`: Terminal colors for logging
-- `inquirer`: Interactive CLI prompts
-
-**Dev Dependencies**:
-- `typescript`: TypeScript compiler
-- `vitepress`: Documentation generation
-
-
---------
-BRANCH: ripple-thinker
-
-* This branch is dedicated to try some stuff with Claude and the embodiment of Ripple in the MCP
-
-## TODOs 
-
-* [ ] Think of calling this package mcp-ripple-thinker
-* [ ] Think of building a library for other use that this one would import from called 'ripple-thinker'
-
-
-
+**Philosophy**: Structure determines behavior. This tool system embodies advancing patterns through authentic creative orientation rather than reactive problem-solving cycles.

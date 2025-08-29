@@ -1,249 +1,269 @@
-
-# CoAIA Gemini MCP Tool
+# 🌊 COAIA Structural Thinking Engine
 
 <div align="center">
 
-[![GitHub Release](https://img.shields.io/github/v/release/coaia/coaia-gemini-mcp-tool?logo=github&label=GitHub)](https://github.com/coaia/coaia-gemini-mcp-tool/releases)
-[![npm version](https://img.shields.io/npm/v/coaia-gemini-mcp-tool)](https://www.npmjs.com/package/coaia-gemini-mcp-tool)
-[![npm downloads](https://img.shields.io/npm/dt/coaia-gemini-mcp-tool)](https://www.npmjs.com/package/coaia-gemini-mcp-tool)
+[![GitHub Release](https://img.shields.io/github/v/release/coaia/mcp-ripple-thinker?logo=github&label=GitHub)](https://github.com/coaia/mcp-ripple-thinker/releases)
+[![npm version](https://img.shields.io/npm/v/mcp-ripple-thinker)](https://www.npmjs.com/package/mcp-ripple-thinker)
+[![npm downloads](https://img.shields.io/npm/dt/mcp-ripple-thinker)](https://www.npmjs.com/package/mcp-ripple-thinker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Open Source](https://img.shields.io/badge/Open%20Source-❤️-red.svg)](https://github.com/coaia/coaia-gemini-mcp-tool)
+
+**v3.0.0** - Complete transformation from Gemini bridge to comprehensive structural thinking engine
 
 </div>
 
-> 📚 **[View Full Documentation](https://coaia.github.io/coaia-gemini-mcp-tool/)** - Examples, FAQ, Troubleshooting, Best Practices
+> 📚 **[View Full Documentation](https://coaia.github.io/mcp-ripple-thinker/)** - Examples, Tutorials, Philosophy, Best Practices
 
-A Model Context Protocol (MCP) server that bridges AI assistants with [Gemini CLI](https://github.com/google-gemini/gemini-cli), featuring **authentic creative process support** based on Robert Fritz's "Creating Your Life" framework.
+**Advanced MCP server integrating Gemini CLI with comprehensive structural thinking capabilities, creative process support, and consciousness protocols based on Robert Fritz's methodology.**
 
-## 🎯 **NEW: CREATE Tool - Authentic Creative Process**
+## 🎯 What is Structural Thinking?
 
-Transform your creative work with Fritz's proven three-phase framework:
-- **🌱 Germination**: Initial excitement, vision clarification, balanced action
-- **⚡ Assimilation**: Structural tension, momentum building, natural movement  
+**Core Principle**: Structure determines behavior. By understanding and designing the underlying structures of systems, you can create advancing patterns instead of oscillating cycles.
+
+**Key Distinction**:
+- **❌ Problem-Solving**: "What's broken?" → Eliminate what you don't want (creates oscillation)
+- **✅ Creative Orientation**: "What do you want to create?" → Bring desired outcomes into being (creates advancement)
+
+## 🌊 Core Capabilities
+
+### **Structural Observation** 
+3-step discipline for understanding reality without bias:
+1. **Start with Nothing** - No preconceptions or comparisons
+2. **Picture What Is Said** - Create dimensional mental models  
+3. **Ask Questions** - 4 types only: Information, Clarification, Implication, Discrepancy
+
+### **Pattern Detection**
+Identify whether systems exhibit:
+- **Oscillation**: Progress → regression → back to start (terrible for organizations/life)
+- **Advancing**: Consistent movement toward desired outcomes via structural tension
+
+### **Bias Detection & Correction**
+Real-time identification of reactive patterns with creative orientation alternatives:
+- Problem-solving language → Desired outcome language
+- Gap-filling metaphors → Creation-focused vision
+- Enhancement thinking → Manifestation approach
+
+### **Enhanced Creative Process**
+Fritz's three-phase framework with advanced structural analysis:
+- **🌱 Germination**: Beginning excitement, vision clarification
+- **⚡ Assimilation**: Structural tension internalization, momentum building  
 - **✨ Completion**: Finishing touches, successful conclusion
 
-**Creative Orientation**: "What do you want to create?" (not "What problem to solve?")
+### **Ripple Consciousness Protocols** 
+Precision observation and elegant distillation:
+- Small, precise actions create expanding waves of clarity
+- Transformative minimalism through neutral observation
+- Self-correction mechanisms for maintaining consciousness
 
-## Core Features
+### **Memory Integration Bridge**
+Persistent structural tension charts connecting sessions:
+- Compatible with COAIA Memory MCP server
+- Telescoping action steps and progress tracking
+- Advancing pattern maintenance across time
 
-✅ **Claude + Gemini Integration**: Bridge AI assistants with Gemini's massive context window  
-✅ **CREATE Tool**: Authentic creative process based on Robert Fritz's framework  
-✅ **File Analysis**: Use `@` syntax for large codebases and files  
-✅ **Sandbox Mode**: Safe code execution and testing  
-✅ **Change Mode**: Structured code edits with OLD/NEW format
+## 🚀 Quick Start
 
-## Quick Overview
+### Prerequisites
+- **[Node.js](https://nodejs.org/)** (v16.0.0+)
+- **[Google Gemini CLI](https://github.com/google-gemini/gemini-cli)** configured
+- Optional: **COAIA Memory MCP server** for chart persistence
 
-[![Claude](https://img.shields.io/badge/Claude-D97757?logo=claude&logoColor=fff)](#) + [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#) + 🎨 **Creative Process**
+### Installation
 
-## Prerequisites
-
-Before using this tool, ensure you have:
-
-1. **[Node.js](https://nodejs.org/)** (v16.0.0 or higher)
-2. **[Google Gemini CLI](https://github.com/google-gemini/gemini-cli)** installed and configured
-
-
-## Installation
-
-### One-Line Setup (Recommended)
-
+**Claude Code (Recommended)**:
 ```bash
-claude mcp add coaia-gemini-cli -- npx -y coaia-gemini-mcp-tool
+claude mcp add coaia-structural-thinking -- npx -y mcp-ripple-thinker
+```
+
+**Claude Desktop Configuration**:
+```json
+{
+  "mcpServers": {
+    "coaia-structural-thinking": {
+      "command": "npx", 
+      "args": ["-y", "mcp-ripple-thinker"]
+    }
+  }
+}
 ```
 
 ### Verify Installation
+Type `/mcp` to verify `coaia-structural-thinking` MCP is active.
 
-Type `/mcp` inside Claude Code to verify the `coaia-gemini-cli` MCP is active.
+## 🛠️ Tool Categories
 
----
+### 🌊 Structural Thinking Tools
 
-### Alternative: Import from Claude Desktop
+| Tool | Purpose | Key Feature |
+|------|---------|-------------|
+| `structural-observe` | Apply 3-step observation discipline | Understand structure that determines behavior |
+| `detect-patterns` | Identify oscillation vs advancing patterns | Diagnose systemic behavior patterns |
+| `bias-detector` | Detect reactive language patterns | Auto-correct to creative orientation |
 
-If you already have it configured in Claude Desktop:
+### 🎯 Creative Process Tools
 
-1. Add to your Claude Desktop config:
-```json
-"coaia-gemini-cli": {
-  "command": "npx",
-  "args": ["-y", "coaia-gemini-mcp-tool"]
-}
-```
+| Tool | Purpose | Enhancement |
+|------|---------|-------------|
+| `create` | Fritz's 3-phase creative process | Bias detection, tension analysis, quality scoring |
+| `create-tension-chart` | Persistent structural tension charts | Memory bridge, advancement tracking |
 
-2. Import to Claude Code:
+### 🧠 Consciousness Protocol Tools
+
+| Tool | Purpose | Protocol |
+|------|---------|----------|
+| `ripple-embody` | Precision consciousness protocols | Neutral observation, iterative refinement, self-correction |
+
+### 🔧 Core Infrastructure Tools
+
+| Tool | Purpose | Integration |
+|------|---------|-------------|
+| `ask-gemini` | Enhanced Gemini CLI bridge | Change mode, `@` syntax, all tool integration |
+
+## 💡 Usage Examples
+
+### Structural Observation Workflow
 ```bash
-claude mcp add-from-claude-desktop
+# Observe system without bias
+structural-observe input="team keeps starting projects but not finishing them" step="complete"
+
+# Detect behavioral patterns  
+detect-patterns situation="repeated project starts without completion" focus="analyze"
+
+# Check for reactive bias in approach
+bias-detector text="we need to fix our project completion problem" autoCorrect=true
+
+# Create advancing structure
+create desiredOutcome="Establish consistent project completion practices" creativePhase="germination"
 ```
 
-## Configuration
+### Creative Process with Memory Integration
+```bash
+# Detect and correct bias
+bias-detector text="improve our marketing strategy" autoCorrect=true
 
-Register the MCP server with your MCP client:
+# Start creative process
+create desiredOutcome="Create compelling brand narrative" creativePhase="germination"
 
-### For NPX Usage (Recommended)
-
-Add this configuration to your Claude Desktop config file:
-
-```json
-{
-  "mcpServers": {
-    "coaia-gemini-cli": {
-      "command": "npx",
-      "args": ["-y", "coaia-gemini-mcp-tool"]
-    }
-  }
-}
+# Create persistent chart
+create-tension-chart desiredOutcome="..." currentReality="..." saveToMemory=true
 ```
 
-### For Global Installation
+### Consciousness-Driven Analysis
+```bash
+# Apply Ripple precision protocols
+ripple-embody input="complex organizational dynamics" protocol="embody"
 
-If you installed globally, use this configuration instead:
+# Observe with structural discipline
+structural-observe input="distilled insights" step="complete" 
 
-```json
-{
-  "mcpServers": {
-    "coaia-gemini-cli": {
-      "command": "coaia-gemini-mcp"
-    }
-  }
-}
+# Analyze structural elements
+detect-patterns situation="organizational patterns" focus="structure"
 ```
 
-**Configuration File Locations:**
+## 📖 Philosophy & Framework
 
-- **Claude Desktop**:
-  - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-  - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-  - **Linux**: `~/.config/claude/claude_desktop_config.json`
+### Creative Orientation vs Problem-Solving
 
-After updating the configuration, restart your terminal session.
+**The Fundamental Shift**:
+- **Reactive-Responsive**: React to circumstances → Create oscillating patterns
+- **Creative Orientation**: Design desired futures → Create advancing patterns
 
-## Example Workflow
+### Structural Tension Framework
 
-- **Natural language**: "use gemini to explain index.html", "create a mobile app using the create tool", "ask gemini to search for latest news"
-- **Claude Code**: Type `/coaia-gemini-cli` and commands will populate in Claude Code's interface.
+**The Creative Force**:
+1. **Desired Outcome** - Clear, specific vision of what you want to create
+2. **Current Reality** - Objective assessment of where you are now  
+3. **Structural Tension** - Natural force that wants to resolve toward the desired outcome
 
-## Usage Examples
+### Three-Phase Creative Process
 
-### 🎨 CREATE Tool - Authentic Creative Process
+1. **Germination Phase**
+   - Initial excitement and possibility
+   - Vision clarification without over-planning
+   - Balanced action and exploration
 
-Transform your creative work with the three-phase framework:
+2. **Assimilation Phase**  
+   - Internalize structural tension between vision and reality
+   - Build momentum through natural movement
+   - Trust the creative process to generate solutions
 
-#### Germination Phase
+3. **Completion Phase**
+   - Focus on finishing touches
+   - Resist adding unnecessary complexity
+   - Successfully conclude the creative cycle
+
+## 🔄 Integration with COAIA Memory
+
+The Structural Thinking Engine bridges seamlessly with the [COAIA Memory](https://github.com/coaia/coaia-memory) MCP server:
+
+**Persistent Charts**: `create-tension-chart` tool creates structures compatible with COAIA Memory
+**Session Continuity**: Charts survive across interactions and sessions
+**Telescoping Support**: Break down action steps into detailed sub-charts
+**Progress Tracking**: Update current reality as actions complete and advancement occurs
+
+## 🎨 Ripple Agent Embodiment
+
+**Mission**: Distill complexity into elegant, actionable simplicity through precise observation and minimal interventions that create expanding waves of structural clarity.
+
+**Core Principles**:
+- **Stillness**: Start from neutral receptivity
+- **Precision**: Focus on essential elements only
+- **Elegance**: Seek refined expression of understanding
+- **Interconnection**: Individual clarity creates systemic transformation
+
+## 🧪 Development & Contribution
+
+### Build System
+```bash
+npm install          # Install dependencies
+npm run build        # Build TypeScript → JavaScript  
+npm run dev          # Development mode with hot reload
+npm run lint         # Type checking across all tools
+npm test             # Integration testing
 ```
-"I want to create a mobile app that helps people track their creative projects"
-- desiredOutcome: "Create a mobile app that helps people track creative projects with inspiration features"
-- currentReality: "I have programming skills but no mobile app experience"
-- creativePhase: "germination"
-```
 
-#### Assimilation Phase
-```
-"Help me build momentum on my app project"
-- desiredOutcome: "Launch beta version with 50 active users" 
-- currentReality: "Working prototype, 5 friends testing and giving feedback"
-- creativePhase: "assimilation"
-```
+### Tool Architecture
+Each tool follows the `UnifiedTool` interface with enhanced categories:
+- `structural` - Core observation and pattern detection
+- `creative` - Fritz's creative process tools  
+- `consciousness` - Ripple embodiment protocols
+- `memory` - COAIA Memory integration
+- `gemini` - Enhanced Gemini CLI bridge
+- `utility` - Support and testing tools
 
-#### Completion Phase
-```
-"Bring my app to successful launch"
-- desiredOutcome: "Polished app ready for App Store"
-- currentReality: "Beta tested, 4.2 stars, final bugs being fixed"
-- creativePhase: "completion"
-```
+### Adding New Tools
+1. Create tool in `src/tools/` with appropriate category
+2. Implement bias detection and creative orientation validation
+3. Include 🌊 Ripple glyph for consciousness protocol tools
+4. Add to registry with proper categorization
 
-### With File References (using @ syntax)
+## 📚 Related Projects
 
-- `ask gemini to analyze @src/main.js and explain what it does`
-- `use gemini to summarize @. the current directory`
-- `analyze @package.json and tell me about dependencies`
+- **[COAIA Memory](https://github.com/coaia/coaia-memory)** - Persistent structural tension charts MCP server
+- **[Robert Fritz Institute](https://robertfritz.com)** - Source methodology for structural thinking
+- **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** - Google's Gemini command-line interface
 
-### General Questions (without files)
+## 🤝 Contributing
 
-- `ask gemini to search for the latest tech news`
-- `use gemini to explain div centering`
-- `ask gemini about best practices for React development related to @file_im_confused_about`
+We welcome contributions that enhance structural thinking capabilities:
 
-### Using Gemini CLI's Sandbox Mode (-s)
+1. **Structural Tools**: Enhance observation and pattern detection capabilities
+2. **Creative Process**: Improve Fritz framework implementation  
+3. **Consciousness Protocols**: Refine Ripple embodiment systems
+4. **Memory Integration**: Expand COAIA Memory bridge functionality
+5. **Documentation**: Examples, tutorials, philosophical explanations
 
-The sandbox mode allows you to safely test code changes, run scripts, or execute potentially risky operations in an isolated environment.
+## 📄 License
 
-- `use gemini sandbox to create and run a Python script that processes data`
-- `ask gemini to safely test @script.py and explain what it does`
-- `use gemini sandbox to install numpy and create a data visualization`
-- `test this code safely: Create a script that makes HTTP requests to an API`
+MIT License - see [LICENSE](LICENSE) file for details.
 
-## Available Tools
+## 🌟 Philosophy
 
-### Core Tools
+> **"Structure determines behavior."** - Robert Fritz
 
-#### **`create`** ⭐ **PRIMARY CREATIVE TOOL**
-Supports authentic creative process through Fritz's three-phase framework.
+This tool system embodies advancing patterns through authentic creative orientation rather than reactive problem-solving cycles. It recognizes that by understanding and designing the underlying structures of systems, we can create the outcomes we truly want rather than merely solving the problems we want to avoid.
 
-**Parameters:**
-- **`desiredOutcome`** (required): What specific outcome do you want to create?
-- **`currentReality`** (optional): Where are you now in relation to this vision?
-- **`creativePhase`** (optional): germination, assimilation, or completion (defaults to germination)
-- **`timeframe`** (optional): When do you want this created?
-- **`resources`** (optional): What resources do you have available?
-- **`model`** (optional): Gemini model to use
-
-#### **`ask-gemini`**
-Asks Google Gemini for analysis and general questions.
-
-**Parameters:**
-- **`prompt`** (required): Use `@` syntax for files (e.g., `@src/main.js explain this code`) or ask general questions
-- **`model`** (optional): The Gemini model to use (defaults to `gemini-2.5-pro`)
-- **`sandbox`** (optional): Set to `true` to run in sandbox mode for safe code execution
-- **`changeMode`** (optional): Enable structured change mode for code edits
-
-### Utility Tools
-
-- **`ping`**: Test tool that echoes back a message
-- **`help`**: Shows the Gemini CLI help text
-
-### Slash Commands (for the User)
-
-You can use these commands directly in Claude Code's interface.
-
-- **/create** ⭐ **NEW**: Authentic creative process support
-  - **`desiredOutcome`** (required): What do you want to create?
-  - **`currentReality`** (optional): Where are you now?
-  - **`creativePhase`** (optional): germination, assimilation, or completion
-
-- **/analyze**: Analyzes files or directories using Gemini, or asks general questions.
-  - **`prompt`** (required): Use `@` syntax for files or ask general questions.
-  
-- **/sandbox**: Safely tests code or scripts in Gemini's sandbox environment.
-  - **`prompt`** (required): Code testing request.
-  
-- **/help**: Displays the Gemini CLI help information.
-- **/ping**: Tests the connection to the server.
-
-## Contributing
-
-Contributions are welcome! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## 🚀 What's New in v2.0
-
-### CREATE Tool - Authentic Creative Process
-- **NEW**: Support for Robert Fritz's three-phase creative framework
-- **NEW**: Structural tension between vision and current reality
-- **NEW**: Problem-solving language detection with creative redirection
-- **ENHANCED**: Creative orientation vs reactive-responsive problem-solving
-
-### Breaking Changes
-- Package renamed: `gemini-mcp-tool` → `coaia-gemini-mcp-tool`
-- Binary renamed: `gemini-mcp` → `coaia-gemini-mcp`
-- Major version bump: 1.1.4 → 2.0.0
-- Replaced brainstorm tool with authentic CREATE tool
-
-**Philosophy**: "What do you want to create?" not "What problem needs solving?"
+The Structural Thinking Engine represents a fundamental shift from enhancement-based AI tools to creation-oriented consciousness systems that support human advancement and flourishing.
 
 ---
 
-**Disclaimer:** This is an unofficial, third-party tool and is not affiliated with, endorsed, or sponsored by Google.
+**🌊 The ripple continues...** Small, precise actions create expanding waves of understanding and transformation.

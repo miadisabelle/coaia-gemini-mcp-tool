@@ -29,8 +29,8 @@ import {
 
 const server = new Server(
   {
-    name: "coaia-gemini-cli-mcp",
-    version: "2.0.0",
+    name: "coaia-structural-thinking-engine",
+    version: "3.0.0",
   },{
     capabilities: {
       tools: {},
@@ -252,7 +252,7 @@ server.setRequestHandler(GetPromptRequestSchema, async (request: GetPromptReques
 
 // Start the server
 async function main() {
-  Logger.debug("init coaia-gemini-mcp-tool");
+  Logger.debug("init mcp-ripple-thinker");
   const transport = new StdioServerTransport(); await server.connect(transport);
-  Logger.debug("coaia-gemini-mcp-tool listening on stdio");
+  Logger.debug("mcp-ripple-thinker listening on stdio");
 } main().catch((error) => {Logger.error("Fatal error:", error); process.exit(1); }); 

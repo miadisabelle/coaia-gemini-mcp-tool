@@ -15,19 +15,72 @@ function calculateStructuralTension(
   vision: string, 
   currentReality: string
 ): StructuralTension {
-  // Calculate tension strength based on clarity of both elements
-  const visionClarity = vision.length > 50 && !vision.toLowerCase().includes('problem') ? 8 : 5;
-  const realityClarity = currentReality.length > 30 ? 7 : 4;
+  // Enhanced tension calculation with bias detection
+  const visionClarity = analyzeVisionQuality(vision);
+  const realityClarity = analyzeRealityQuality(currentReality);
   const tensionStrength = Math.min(visionClarity, realityClarity);
   
   return {
     vision,
     currentReality,
     tension: tensionStrength,
-    energy: tensionStrength > 6 
-      ? "Strong creative energy - tension is clear and motivating"
-      : "Moderate energy - vision or current reality could be clearer"
+    energy: generateTensionDescription(tensionStrength, visionClarity, realityClarity)
   };
+}
+
+function analyzeVisionQuality(vision: string): number {
+  let score = 5; // Base score
+  
+  // Positive indicators
+  if (vision.length > 50) score += 1;
+  if (vision.includes('create') || vision.includes('build') || vision.includes('achieve')) score += 1;
+  if (!vision.toLowerCase().includes('problem') && !vision.toLowerCase().includes('fix')) score += 2;
+  
+  // Creative orientation language
+  const creativeWords = ['manifest', 'bring into being', 'establish', 'design', 'develop', 'realize'];
+  if (creativeWords.some(word => vision.toLowerCase().includes(word))) score += 2;
+  
+  // Problem-solving language penalties
+  const problemWords = ['solve', 'eliminate', 'stop', 'prevent', 'avoid', 'fix', 'resolve issues'];
+  if (problemWords.some(word => vision.toLowerCase().includes(word))) score -= 3;
+  
+  return Math.max(1, Math.min(10, score));
+}
+
+function analyzeRealityQuality(reality: string): number {
+  let score = 5; // Base score
+  
+  // Positive indicators
+  if (reality.length > 30) score += 1;
+  if (reality.length > 100) score += 1;
+  
+  // Objective language (good)
+  const objectiveWords = ['currently', 'have', 'am', 'exists', 'experience'];
+  if (objectiveWords.some(word => reality.toLowerCase().includes(word))) score += 1;
+  
+  // Judgmental language (reduces clarity)
+  const judgmentWords = ['terrible', 'awful', 'wrong', 'bad', 'should', 'must'];
+  if (judgmentWords.some(word => reality.toLowerCase().includes(word))) score -= 2;
+  
+  // Action-oriented language in current reality (not ideal)
+  const actionWords = ['need to', 'plan to', 'going to', 'will'];
+  if (actionWords.some(word => reality.toLowerCase().includes(word))) score -= 1;
+  
+  return Math.max(1, Math.min(10, score));
+}
+
+function generateTensionDescription(tensionStrength: number, visionClarity: number, realityClarity: number): string {
+  if (tensionStrength >= 8) {
+    return "🌊 Excellent structural tension - both vision and reality are clear and specific. Strong creative energy available for advancement.";
+  } else if (tensionStrength >= 6) {
+    return "🌊 Good structural tension - clear enough for creative movement. Some refinement could increase energy.";
+  } else if (visionClarity < realityClarity) {
+    return "🌊 Moderate tension - vision could be more specific and free from problem-solving language for stronger creative orientation.";
+  } else if (realityClarity < visionClarity) {
+    return "🌊 Moderate tension - current reality could be more objective and detailed for clearer structural awareness.";
+  } else {
+    return "🌊 Developing tension - both vision and current reality need refinement for stronger creative force.";
+  }
 }
 
 function buildGerminationPrompt(config: {
@@ -197,17 +250,29 @@ This tension is your creative power. It wants to resolve by moving toward your v
 
 // Detect problem-solving language and redirect
 function detectProblemSolvingLanguage(text: string): string | null {
-  const problemWords = ['problem', 'challenge', 'fix', 'solve', 'issue', 'difficulty'];
-  const hasProblemLanguage = problemWords.some(word => 
+  const problemWords = ['problem', 'challenge', 'fix', 'solve', 'issue', 'difficulty', 'trouble', 'prevent', 'stop', 'avoid', 'eliminate'];
+  const detectedWords = problemWords.filter(word => 
     text.toLowerCase().includes(word)
   );
   
-  if (hasProblemLanguage) {
-    return `I noticed problem-solving language in your description. The creative process is about bringing desired outcomes into being, not solving problems.
+  if (detectedWords.length > 0) {
+    return `🌊 **REACTIVE PATTERN DETECTED**
 
-Instead of focusing on what you want to fix or solve, try rephrasing as: "What do you want to create?" or "What outcome do you want to bring into being?"
+I noticed problem-solving language in your description: "${detectedWords.join(', ')}"
 
-This shifts from reactive-responsive orientation to creative orientation. What specific result do you want to create?`;
+**Creative Orientation Reframe**:
+The creative process is about bringing desired outcomes into being, not solving problems or eliminating what you don't want.
+
+**Instead of**: "I need to fix/solve/stop..."
+**Try**: "I want to create/establish/bring into being..."
+
+**Structural Shift**:
+- **Reactive-Responsive**: Focus on what's wrong → eliminate problems
+- **Creative Orientation**: Focus on what you want → manifest desired outcomes
+
+**Question for Reframe**: What specific positive outcome do you want to create or bring into existence?
+
+This shift moves you from reactive patterns (which often create oscillation) to creative patterns (which generate advancing structures).`;
   }
   
   return null;
@@ -224,12 +289,12 @@ const creativeProcessSchema = z.object({
 
 export const createTool: UnifiedTool = {
   name: "create",
-  description: "Support authentic creative process through Fritz's three phases: Germination (initial excitement), Assimilation (building momentum), Completion (finishing touches). Based on creative orientation - what you want to bring into being, not problems to solve.",
+  description: "🌊 Support authentic creative process through Fritz's three phases: Germination (initial excitement), Assimilation (building momentum), Completion (finishing touches). Enhanced with structural tension analysis, bias detection, and creative orientation validation. Focus on what you want to bring into being.",
   zodSchema: creativeProcessSchema,
   prompt: {
-    description: "Guide creative process based on desired outcomes and structural tension, supporting generative creation rather than reactive problem-solving",
+    description: "Guide creative process with enhanced structural awareness, automatic bias detection, and quality assessment of vision/reality clarity for optimal creative tension generation.",
   },
-  category: 'gemini',
+  category: 'creative',
   execute: async (args, onProgress) => {
     const {
       desiredOutcome,
