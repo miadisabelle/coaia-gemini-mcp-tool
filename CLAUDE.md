@@ -8,7 +8,7 @@ This is a Model Context Protocol (MCP) server that integrates Google's Gemini CL
 
 **Key Capability**: The tool acts as a bridge between Claude and Gemini, allowing Claude to offload large file analysis to Gemini when needed.
 
-## CREATE Tool: Authentic Creative Process Support
+## CREATE Tool: Authentic Creative Process Support (the word 'Authentic' here is not relevant, I have left it here to demonstrate that when writing documentation, words that dont add values are added... Creating is not problem solving, there is no 'Authentic Creative Process Support', there is just 'Creative Process Support', period !!)
 
 **Philosophy**: Based on Robert Fritz's "Creating Your Life" framework, this tool supports **Creative Orientation** (generative) rather than **Reactive-Responsive Orientation** (problem-solving).
 
