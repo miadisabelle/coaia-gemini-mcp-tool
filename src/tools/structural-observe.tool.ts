@@ -97,10 +97,10 @@ const structuralObserveSchema = z.object({
 
 export const structuralObserveTool: UnifiedTool = {
   name: "structural-observe",
-  description: "🌊 Apply rigorous 3-step structural observation discipline: 1) Start with Nothing (no preconceptions), 2) Picture What Is Said (mental movie), 3) Ask Questions (4 types only). Embodies Ripple agent precision for understanding underlying structures that determine behavior.",
+  description: "🌊 Embody neutral observation protocols for understanding structures that generate desired outcomes. Three-step discipline: Start with Nothing (neutral receptivity), Picture What Is Said (dimensional clarity), Ask Questions (internally-motivated inquiry) to reveal advancing vs oscillating patterns.",
   zodSchema: structuralObserveSchema,
   prompt: {
-    description: "Guide systematic structural observation to understand reality before any action. Identifies underlying structures that generate behavioral patterns.",
+    description: "Cultivate neutral observation consciousness for understanding structures that support desired outcomes. Reveals advancing patterns through disciplined structural awareness.",
   },
   category: 'structural',
   execute: async (args, onProgress) => {

@@ -121,10 +121,10 @@ const detectPatternsSchema = z.object({
 
 export const detectPatternsTool: UnifiedTool = {
   name: "detect-patterns",
-  description: "🌊 Identify whether a system exhibits Oscillation (cyclical progress/regression) or Advancing (consistent movement toward desired outcomes) behavioral patterns. Core structural thinking diagnostic for understanding what underlying structure generates observed behaviors.",
+  description: "🌊 Recognize structural patterns that support advancing toward visions vs oscillating in cycles. Reveals whether system structures generate consistent movement toward desired outcomes or cyclical patterns that return to starting states.",
   zodSchema: detectPatternsSchema,
   prompt: {
-    description: "Analyze behavioral patterns to determine if a system is oscillating (terrible for organizations/personal life) or advancing (driven by structural tension). Essential for structural diagnosis before any change efforts.",
+    description: "Recognize system patterns that either support consistent advancement toward desired outcomes (advancing structures) or create cyclical patterns that return to starting states (oscillating structures). Reveals structural foundation for creating desired futures.",
   },
   category: 'structural',
   execute: async (args, onProgress) => {

@@ -96,6 +96,35 @@ Example:
 Please reframe your desired outcome in terms of what you want to create or bring into existence.`;
   }
 
+  // CRITICAL: Check for readiness assumptions (Delayed Resolution Principle)
+  const readinessWords = [
+    'ready to begin', 'prepared to start', 'all set to', 'ready for',
+    'prepared to tackle', 'ready to dive into', 'set to commence',
+    'ready to learn', 'prepared for', 'set up to'
+  ];
+  const detectedReadiness = readinessWords.filter(phrase => 
+    currentReality.toLowerCase().includes(phrase)
+  );
+  
+  if (detectedReadiness.length > 0) {
+    return `🌊 **Delayed Resolution Principle Violation**
+
+Robert Fritz: "Tolerate discrepancy, tension, and delayed resolution"
+
+Your current reality contains readiness assumptions: "${detectedReadiness.join(', ')}"
+
+**Structural Tension Requirement**: Current reality must be honest assessment of actual current state, NOT readiness or preparation statements.
+
+**Examples**:
+- Instead of: "Ready to begin Django tutorial"  
+- Try: "Never used Django, completed Python basics course last month"
+
+- Instead of: "Prepared to start marketing campaign"
+- Try: "Have product prototype, no marketing experience, $2000 budget available"
+
+**Why This Matters**: Premature resolution DESTROYS the structural tension needed for creative advancement. The gap between vision and reality IS the creative force.`;
+  }
+
   // Check for action-oriented language in current reality
   const actionWords = ['need to', 'should', 'must', 'will', 'plan to', 'going to'];
   const detectedActions = actionWords.filter(word => 

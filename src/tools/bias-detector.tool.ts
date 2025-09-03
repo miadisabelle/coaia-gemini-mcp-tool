@@ -190,10 +190,10 @@ const biasDetectorSchema = z.object({
 
 export const biasDetectorTool: UnifiedTool = {
   name: "bias-detector", 
-  description: "🌊 Detect and correct reactive bias patterns in language and thinking. Identifies problem-solving, enhancement, gap-filling, and other reactive orientations that lead to oscillating patterns. Provides creative orientation alternatives for advancing patterns.",
+  description: "🌊 Cultivate creative orientation awareness - recognize when language focuses on elimination vs creation, and explore generative alternatives that support advancing patterns. Transforms reactive expressions into creative outcome language.",
   zodSchema: biasDetectorSchema,
   prompt: {
-    description: "Analyze text for reactive bias patterns and provide creative orientation reframes. Essential for maintaining advancing patterns rather than oscillating problem-solving cycles.",
+    description: "Cultivate awareness of language patterns that either support creative outcome generation or perpetuate reactive cycles. Explores generative alternatives that align with advancing structural patterns.",
   },
   category: 'structural',
   execute: async (args, onProgress) => {
