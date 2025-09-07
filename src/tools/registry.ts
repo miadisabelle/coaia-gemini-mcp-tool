@@ -3,6 +3,8 @@ import { Tool, Prompt } from "@modelcontextprotocol/sdk/types.js"; // Each tool 
 import { ToolArguments } from "../constants.js";
 import { ZodTypeAny, ZodError } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
+import { getVortexCore, ToolExecutionContext } from "../core/index.js";
+import { Logger } from "../utils/logger.js";
 
 export interface UnifiedTool {
   name: string;
@@ -68,9 +70,42 @@ export function getPromptDefinitions(): Prompt[] { // Helper to get MCP Prompt d
 
 export async function executeTool(toolName: string, args: ToolArguments, onProgress?: (newOutput: string) => void): Promise<string> {
   const tool = toolRegistry.find(t => t.name === toolName);
-  if (!tool) { throw new Error(`Unknown tool: ${toolName}`); } try { const validatedArgs = tool.zodSchema.parse(args);
-    return tool.execute(validatedArgs, onProgress);
-  } catch (error) { if (error instanceof ZodError) {
+  if (!tool) { 
+    throw new Error(`Unknown tool: ${toolName}`); 
+  }
+  
+  try { 
+    const validatedArgs = tool.zodSchema.parse(args);
+    
+    // Get VortexCore for constitutional governance
+    const vortexCore = getVortexCore();
+    
+    // Create execution context
+    const executionContext: ToolExecutionContext = {
+      toolName,
+      args: validatedArgs,
+      input: args.prompt || JSON.stringify(validatedArgs),
+      timestamp: new Date()
+    };
+    
+    // Pre-execution constitutional validation
+    const preValidation = await vortexCore.preExecutionValidation(executionContext);
+    
+    if (!preValidation.approved && preValidation.guidance) {
+      Logger.debug(`Constitutional guidance for ${toolName}: ${preValidation.guidance}`);
+      // For now, we'll log guidance but continue execution
+      // In future versions, this could block execution or modify arguments
+    }
+    
+    // Execute the tool
+    const rawOutput = await tool.execute(preValidation.modifiedArgs || validatedArgs, onProgress);
+    
+    // Post-execution constitutional validation and correction
+    const finalOutput = await vortexCore.postExecutionValidation(executionContext, rawOutput);
+    
+    return finalOutput;
+  } catch (error) { 
+    if (error instanceof ZodError) {
       const issues = error.issues.map(issue => `${issue.path.join('.')}: ${issue.message}`).join(', ');
       throw new Error(`Invalid arguments for ${toolName}: ${issues}`);
     }
