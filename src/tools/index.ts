@@ -5,6 +5,7 @@ import { pingTool, helpTool } from './simple-tools.js';
 import { createTool } from './create.tool.js';
 import { fetchChunkTool } from './fetch-chunk.tool.js';
 import { timeoutTestTool } from './timeout-test.tool.js';
+import { constitutionalAnalysisTool } from './constitutional-analysis.tool.js';
 
 toolRegistry.push(
   askGeminiTool,
@@ -12,7 +13,8 @@ toolRegistry.push(
   helpTool,
   createTool,
   fetchChunkTool,
-  timeoutTestTool
+  timeoutTestTool,
+  constitutionalAnalysisTool
 );
 
 export * from './registry.js';
