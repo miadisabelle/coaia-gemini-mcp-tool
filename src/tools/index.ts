@@ -7,6 +7,7 @@ import { fetchChunkTool } from './fetch-chunk.tool.js';
 import { timeoutTestTool } from './timeout-test.tool.js';
 import { constitutionalAnalysisTool } from './constitutional-analysis.tool.js';
 import { agenticAnalysisTool } from './agentic-analysis.tool.js';
+import { resilientCoordinationTool } from './resilient-coordination.tool.js';
 
 toolRegistry.push(
   askGeminiTool,
@@ -16,7 +17,8 @@ toolRegistry.push(
   fetchChunkTool,
   timeoutTestTool,
   constitutionalAnalysisTool,
-  agenticAnalysisTool
+  agenticAnalysisTool,
+  resilientCoordinationTool
 );
 
 export * from './registry.js';
