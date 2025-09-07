@@ -8,6 +8,7 @@ import { timeoutTestTool } from './timeout-test.tool.js';
 import { constitutionalAnalysisTool } from './constitutional-analysis.tool.js';
 import { agenticAnalysisTool } from './agentic-analysis.tool.js';
 import { resilientCoordinationTool } from './resilient-coordination.tool.js';
+import { systemIntegrationTool } from './system-integration.tool.js';
 
 toolRegistry.push(
   askGeminiTool,
@@ -18,7 +19,8 @@ toolRegistry.push(
   timeoutTestTool,
   constitutionalAnalysisTool,
   agenticAnalysisTool,
-  resilientCoordinationTool
+  resilientCoordinationTool,
+  systemIntegrationTool
 );
 
 export * from './registry.js';
