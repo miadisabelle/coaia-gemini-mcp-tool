@@ -11,6 +11,11 @@
 
 </div>
 
+
+---
+WILL PROBABLY BE DEPRECATED WITH GEMINI-CLI FREE STOPPING ENS OF JUNE 2026
+--- 
+
 > 📚 **[View Full Documentation](https://coaia.github.io/coaia-gemini-mcp-tool/)** - Examples, FAQ, Troubleshooting, Best Practices
 
 A Model Context Protocol (MCP) server that bridges AI assistants with [Gemini CLI](https://github.com/google-gemini/gemini-cli), featuring **authentic creative process support** based on Robert Fritz's "Creating Your Life" framework.
